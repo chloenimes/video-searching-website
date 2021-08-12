@@ -138,7 +138,7 @@ header button:hover {
 }
 
 /******************************************
-* Results fo the search
+* Results for the search
 *******************************************/
 #result {
   width: 800px;
@@ -147,6 +147,7 @@ header button:hover {
 .result-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
 }
 .video-by-search {
   border: 1px solid #ccc;
