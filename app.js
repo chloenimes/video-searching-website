@@ -2,7 +2,7 @@
 // GLOBAL VARIABLE
 // ******************************************************************************************
 let currKeyword = ""
-let keywordByUser = document.querySelector("#keyword-by-user")
+const keywordByUser = document.querySelector("#keyword-by-user")
 const videoBySearch = document.querySelector(".result-container")
 // ******************************************************************************************
 // part1: searching for a movie
