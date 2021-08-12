@@ -1,8 +1,8 @@
 // ******************************************************************************************
 // GLOBAL VARIABLE
 // ******************************************************************************************
-let keywordByUser = document.querySelector("#keyword-by-user")
 let currKeyword = ""
+let keywordByUser = document.querySelector("#keyword-by-user")
 const videoBySearch = document.querySelector(".result-container")
 // ******************************************************************************************
 // part1: searching for a movie
@@ -10,6 +10,7 @@ const videoBySearch = document.querySelector(".result-container")
 // and search the dailymotion.com API for videos
 // ******************************************************************************************
 const enterKeywordByUser = (event) => {
+    // when user presses 'enter key', go search
     currKeyword = keywordByUser.value
     if (event.keyCode === 13) {
         pressedSearchButton()        
