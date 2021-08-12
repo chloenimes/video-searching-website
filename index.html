@@ -1,0 +1,61 @@
+<!-- 
+    Student Name : Semin Jung
+    Student ID   : 109723205
+    Student Email: cjung9@myseneca.ca
+    Section: WEB222 NDD
+    Date: 2021-08-12
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Daily Motion</title>
+     <link rel="stylesheet" href="styles.css">
+     <!-- google fonts: Nunito -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+ </head>
+ <body>
+    <header>
+        <h1>dailymotion</h1>
+        <nav>
+            <button id="btn-nav-search">Search</button>
+            <button id="btn-nav-upload">Upload Video</span>
+        </nav>
+    </header>
+    
+
+    <!-- search box -->
+    <div id="search-box" >
+        <input id="keyword-by-user" type="text" placeholder="Enter your search terms"/>
+        <button id="btn-search">SEARCH</button>
+    </div>
+    <div id="searching-error-message"></div>
+
+    <!-- upload video box -->
+    <form action="https://submit-form.com/6lx17D9a" method="POST" id="form-style" class="hidden">
+        <p>To upload your video, please complete the following form:</p>
+        <label for="name">Name*</label>
+        <input type="text" name="name" placeholder="Enter your name" required/>
+        <label for="email">Email*</label>
+        <input type="text" name="email" placeholder="Enter your email" required/>
+        <label for="file">Upload File</label>
+        <input type="file" name="file">
+        <label for="textarea">Enter a description for your video:</label>
+        <input type="textarea" name="textarea"/>
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <!-- displaying results of the search -->
+    <div id="result">
+        <div class="result-container"></div>
+    </div>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="app.js"></script>
+ </body>
+ </html>
