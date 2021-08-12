@@ -4,6 +4,7 @@
 let currKeyword = ""
 const keywordByUser = document.querySelector("#keyword-by-user")
 const videoBySearch = document.querySelector(".result-container")
+const divErrorMessage = document.querySelector("#searching-error-message")
 // ******************************************************************************************
 // part1: searching for a movie
 // after pressing the SEARCH button, the website should clear the text box 
@@ -17,16 +18,15 @@ const enterKeywordByUser = (event) => {
     }
     return currKeyword
 }
-const pressedSearchButton = () => {
-    const divErrorMessage = document.querySelector("#searching-error-message")
-    if (currKeyword === "") {
+const pressedSearchButton = () => {    
+    if (keywordByUser.value === "") {
         videoBySearch.innerHTML=""
         // user doesn't put any keyword in the search box        
         divErrorMessage.innerHTML = `
             <p>Sorry, you must enter a keyword</p>
         `
     }
-    else {        
+    else {                 
         divErrorMessage.innerHTML =""
         videoBySearch.innerHTML=""
         // if user puts a keyword, go the website and find videos matched
@@ -108,29 +108,33 @@ const pressedSearchButton = () => {
     }  
     // after pressing the Search button, the website should clear the text box
     currKeyword = ""   
+    keywordByUser.value = ""
 }
 // ******************************************************************************************
 // * Manipulate Search & Upload Video (nav menu)
 // ******************************************************************************************
 const visibleSearchBox = document.querySelector("#search-box")
 const visibleForm = document.querySelector("#form-style")
-const clickedNavSearch = () => {
+const clickedNavSearch = () => {        
+    divErrorMessage.innerHTML=""
+    videoBySearch.innerHTML=""
+    currKeyword = "" 
     // - if search box is not shown (hidden), display it
     if (visibleSearchBox.classList.contains("hidden")){
         visibleSearchBox.classList.remove("hidden")
         visibleForm.classList.add("hidden")
     }
-    else {
-        // already display search box
-        videoBySearch.innerHTML=""
-        currKeyword = "" 
-    }
+
 }
 const clickedNavUpload = () => {
-    if(visibleForm.classList.contains("hidden")) {
-        visibleForm.classList.remove("hidden")
+    divErrorMessage.innerHTML=""
+    videoBySearch.innerHTML=""
+    currKeyword = "" 
+    if(visibleForm.classList.contains("hidden")) {      
         visibleSearchBox.classList.add("hidden")
+        visibleForm.classList.remove("hidden")
     }
+
 }
 // ******************************************************************************************
 // * Event Handlers
